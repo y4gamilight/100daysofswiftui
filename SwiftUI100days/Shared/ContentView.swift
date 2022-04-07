@@ -9,8 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            HStack {
+                Text("Row 1")
+                    .font(.title)
+                    .foregroundColor(Color.green)
+                    .padding()
+                Text("Row 2")
+                    .font(.title)
+                    .foregroundColor(Color.green)
+                    .padding()
+            }
+            HStack {
+                Text("Row 1")
+                    .font(.subheadline)
+                    .foregroundColor(Color.green)
+                    .padding()
+                Text("Row 2")
+                    .font(.subheadline)
+                    .foregroundColor(Color.green)
+                    .padding()
+            }
+            CircleImageView()
+        }
     }
 }
 
