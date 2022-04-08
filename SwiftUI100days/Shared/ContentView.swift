@@ -10,27 +10,23 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            HStack {
-                Text("Row 1")
-                    .font(.title)
-                    .foregroundColor(Color.green)
-                    .padding()
-                Text("Row 2")
-                    .font(.title)
-                    .foregroundColor(Color.green)
-                    .padding()
+            MapView()
+            VStack {
+                CircleImageView()
+                    .offset(y: -80)
+                    .padding(.bottom, -80)
+                VStack(alignment: .leading) {
+                    Text("Le Tan Thanh")
+                        .font(.title)
+                    HStack {
+                        Text("iOS developer")
+                            .font(.subheadline)
+                        Spacer()
+                        Text("Ho Chi Minh City")
+                            
+                    }
+                }.padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
             }
-            HStack {
-                Text("Row 1")
-                    .font(.subheadline)
-                    .foregroundColor(Color.green)
-                    .padding()
-                Text("Row 2")
-                    .font(.subheadline)
-                    .foregroundColor(Color.green)
-                    .padding()
-            }
-            CircleImageView()
         }
     }
 }
