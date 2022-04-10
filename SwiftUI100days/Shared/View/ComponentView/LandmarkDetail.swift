@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
-//  Shared
+//  LandmarkDetail.swift
+//  SwiftUI100days
 //
-//  Created by C02GM15YQ05R on 06/04/2022.
+//  Created by Le Tan Thanh on 10/04/2022.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct LandmarkDetail: View {
     var body: some View {
         VStack {
             MapView()
@@ -25,14 +25,18 @@ struct ContentView: View {
                         Text("Ho Chi Minh City")
                             
                     }
+                    Divider()
+                    Text("About Turtle Rock")
+                        .font(.title2)
+                    Text("Descriptive text goes here.")
                 }.padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
             }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LandmarkDetail()
     }
 }

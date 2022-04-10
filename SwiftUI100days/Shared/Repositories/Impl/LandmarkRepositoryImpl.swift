@@ -1,15 +1,11 @@
 //
-//  LandmarkRepository.swift
-//  SwiftUI100days (iOS)
+//  LandmarkRepositoryImpl.swift
+//  SwiftUI100days
 //
-//  Created by C02GM15YQ05R on 08/04/2022.
+//  Created by Le Tan Thanh on 10/04/2022.
 //
 
 import Foundation
-
-protocol LandmarkRepository {
-    func load<T: Decodable>(_ filename: String) -> T
-}
 
 class LandmarkRepositoryImpl: LandmarkRepository {
     func load<T: Decodable>(_ filename: String) -> T {

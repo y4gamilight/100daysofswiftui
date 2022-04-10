@@ -13,7 +13,7 @@ struct Landmark: Hashable, Codable {
     var name: String
     var park: String
     var state: String
-    var desc: String
+    var description: String
     
     private var imageName: String
     var image: Image {
@@ -25,5 +25,15 @@ struct Landmark: Hashable, Codable {
     struct Coordinates: Hashable, Codable {
         var latitude: Double
         var longitude: Double
+    }
+    
+    init(id: Int, name: String, park:String, state:String, description:String, imageName: String, coordinates: Coordinates) {
+        self.id = id
+        self.name = name
+        self.park = park
+        self.state = state
+        self.description = description
+        self.imageName = imageName
+        self.coordinates = coordinates
     }
 }
