@@ -8,35 +8,48 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    var landmark: Landmark
     var body: some View {
         VStack {
-            MapView()
+            MapView(coordinate: landmark.coordinates)
             VStack {
-                CircleImageView()
-                    .offset(y: -80)
-                    .padding(.bottom, -80)
+                CircleImageView(image: landmark.image)
+                    .offset(y: -140)
+                    .padding(.bottom, -140)
                 VStack(alignment: .leading) {
-                    Text("Le Tan Thanh")
+                    Text(landmark.name)
                         .font(.title)
                     HStack {
-                        Text("iOS developer")
+                        Text(landmark.park)
                             .font(.subheadline)
                         Spacer()
-                        Text("Ho Chi Minh City")
+                        Text(landmark.state)
                             
                     }
                     Divider()
-                    Text("About Turtle Rock")
+                    Text("About \(landmark.name)")
                         .font(.title2)
-                    Text("Descriptive text goes here.")
+                    Text(landmark.description)
                 }.padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
             }
         }
+        .navigationTitle(landmark.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkDetail()
+       let landmark = Landmark(id: 1,
+                                    name: "VinHome A",
+                                    park: "Central Pack",
+                                    state: "District 2",
+                                    description: "List herror",
+                                    imageName: "icybay",
+                                    coordinates: .init(latitude: 1.0, longitude: 2.05))
+        ForEach(["iPhone SE (2nd generation)", "iPhone XS Max"], id: \.self) { deviceName in
+            LandmarkDetail(landmark: landmark)
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+       }
     }
 }

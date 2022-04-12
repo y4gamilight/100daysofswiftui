@@ -20,7 +20,7 @@ struct Landmark: Hashable, Codable {
         Image(imageName)
     }
     
-    private var coordinates: Coordinates
+    var coordinates: Coordinates
     
     struct Coordinates: Hashable, Codable {
         var latitude: Double
@@ -36,4 +36,5 @@ struct Landmark: Hashable, Codable {
         self.imageName = imageName
         self.coordinates = coordinates
     }
+    
 }
