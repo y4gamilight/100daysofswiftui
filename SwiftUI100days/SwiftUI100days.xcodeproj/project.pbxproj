@@ -23,6 +23,8 @@
 		3174838F27FDA921002D8EA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3174836427FDA921002D8EA7 /* Assets.xcassets */; };
 		31BA427C280037470009DDD3 /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 31BA427B280037470009DDD3 /* landmarkData.json */; };
 		31BA427F2800388E0009DDD3 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA427E2800388E0009DDD3 /* Landmark.swift */; };
+		31E46B272805960C00EC93B1 /* LandmarkVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E46B262805960C00EC93B1 /* LandmarkVM.swift */; };
+		31E46B282805960C00EC93B1 /* LandmarkVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E46B262805960C00EC93B1 /* LandmarkVM.swift */; };
 		3B05551E2802AAB2009CE343 /* LandmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05551D2802AAB2009CE343 /* LandmarkService.swift */; };
 		3B05551F2802AAB2009CE343 /* LandmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05551D2802AAB2009CE343 /* LandmarkService.swift */; };
 		3B05552B2802AB4B009CE343 /* LandmarkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0555282802AB4B009CE343 /* LandmarkRepository.swift */; };
@@ -74,6 +76,7 @@
 		3174838827FDA921002D8EA7 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		31BA427B280037470009DDD3 /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
 		31BA427E2800388E0009DDD3 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		31E46B262805960C00EC93B1 /* LandmarkVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkVM.swift; sourceTree = "<group>"; };
 		3B05551D2802AAB2009CE343 /* LandmarkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkService.swift; sourceTree = "<group>"; };
 		3B0555282802AB4B009CE343 /* LandmarkRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkRepository.swift; sourceTree = "<group>"; };
 		3B05552A2802AB4B009CE343 /* LandmarkRepositoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -210,6 +213,14 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		31E46B222805955100EC93B1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				31E46B262805960C00EC93B1 /* LandmarkVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		3B05551B2802AA99009CE343 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +265,7 @@
 		3B4FF0582802DEF60055EA84 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				31E46B222805955100EC93B1 /* ViewModels */,
 				3B4FF0592802DF050055EA84 /* ComponentView */,
 				3174836327FDA91F002D8EA7 /* ContentView.swift */,
 			);
@@ -437,6 +449,7 @@
 				3B05551E2802AAB2009CE343 /* LandmarkService.swift in Sources */,
 				3B4FF0612802EE550055EA84 /* LandmarkDetail.swift in Sources */,
 				3B05552D2802AB4B009CE343 /* LandmarkRepositoryImpl.swift in Sources */,
+				31E46B272805960C00EC93B1 /* LandmarkVM.swift in Sources */,
 				3105BC5C27FEF190004F65CE /* MapView.swift in Sources */,
 				3105BC5927FED691004F65CE /* CircleImageView.swift in Sources */,
 				3B0555302802AB5F009CE343 /* LandmarkServiceImpl.swift in Sources */,
@@ -456,6 +469,7 @@
 				3105BC5D27FEF190004F65CE /* MapView.swift in Sources */,
 				3B4FF0622802EE550055EA84 /* LandmarkDetail.swift in Sources */,
 				3105BC5A27FED691004F65CE /* CircleImageView.swift in Sources */,
+				31E46B282805960C00EC93B1 /* LandmarkVM.swift in Sources */,
 				3B05552E2802AB4B009CE343 /* LandmarkRepositoryImpl.swift in Sources */,
 				3B0555322802AE85009CE343 /* Landmark.swift in Sources */,
 				3B05552C2802AB4B009CE343 /* LandmarkRepository.swift in Sources */,

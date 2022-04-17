@@ -11,7 +11,9 @@ import SwiftUI
 struct SwiftUI100daysApp: App {
     var body: some Scene {
         WindowGroup {
+            let landmarkVM = LandmarkVM(service: LandmarkServiceImpl(repository: LandmarkRepositoryImpl()))
             ContentView()
+                .environmentObject(landmarkVM)
         }
     }
 }

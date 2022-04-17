@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    let landmarkService: LandmarkService = LandmarkServiceImpl(repository: LandmarkRepositoryImpl())
+    @EnvironmentObject var landmarkVM: LandmarkVM
     @State var landmarks: [Landmark] = []
     var body: some View {
-        LandmarkList(landmarks: landmarks)
+        LandmarkList(landmarks: self.landmarkVM.landmarks)
             .onAppear(perform: {
-                self.landmarks = landmarkService.loadLandmarks()
+                self.landmarkVM.getAll()
             })
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        let landmarkVM = LandmarkVM(service: LandmarkServiceImpl(repository: LandmarkRepositoryImpl()))
         ContentView()
+            .environmentObject(landmarkVM)
     }
 }
 
