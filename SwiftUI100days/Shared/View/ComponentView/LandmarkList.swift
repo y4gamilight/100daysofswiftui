@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LandmarkList: View {
+    @EnvironmentObject var landmarkVM: LandmarkVM
     @State private var showFavoritesOnly = false
     var filteredLandmarks: [Landmark] {
             landmarks.filter { landmark in

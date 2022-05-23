@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    @EnvironmentObject var landmarkVM: LandmarkVM
     var landmark: Landmark
+    var landmarkIndex: Int {
+        landmarkVM.landmarks.firstIndex(where: { $0.id == landmark.id })!
+    }
     var body: some View {
         VStack {
             MapView(coordinate: landmark.coordinates)
@@ -17,8 +21,11 @@ struct LandmarkDetail: View {
                     .offset(y: -140)
                     .padding(.bottom, -140)
                 VStack(alignment: .leading) {
-                    Text(landmark.name)
-                        .font(.title)
+                    HStack {
+                        Text(landmark.name)
+                            .font(.title)
+                        FavoriteButton(isSet: $landmarkVM.landmarks[landmarkIndex].isFavorite)
+                    }
                     HStack {
                         Text(landmark.park)
                             .font(.subheadline)
